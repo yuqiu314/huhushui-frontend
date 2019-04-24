@@ -1,0 +1,79 @@
+html {
+  font-family: RobotoDraft, 'Helvetica Neue', Helvetica, Arial;
+}
+
+body {
+  background: #3A3A4D;
+  padding: 25px;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+h1 {
+  color: #efefef;
+  font-weight: normal;
+  font-weight: 300;
+  margin-bottom: 30px;
+}
+h1 a {
+  color: #efefef;
+  border-bottom: 2px solid #efefef;
+  text-decoration: none;
+  padding-bottom: 3px;
+}
+h1 a:hover {
+  color: yellowgreen;
+  border-color: yellowgreen;
+}
+
+button {
+  padding: 12px 30px;
+  box-shadow: none;
+  border: none;
+  color: #efefef;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+button:hover {
+  background-color: rgba(0, 0, 0, 0.35);
+  color: yellowgreen;
+}
+button:focus {
+  outline: none;
+}
+
+#list {
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 250px;
+  width: 90%;
+  width: 0;
+  position: relative;
+  display: block;
+  margin-top: 50px;
+}
+
+.tile {
+  display: block;
+  position: absolute;
+  background-color: yellowgreen;
+  color: #3A3A4D;
+  padding: 5px;
+  font-weight: bold;
+}
+
+.layout {
+  color: #efefef;
+  margin-bottom: 15px;
+}
+.layout label {
+  margin-right: 15px;
+  cursor: pointer;
+}
+.layout label:hover {
+  color: yellowgreen;
+}
+.layout input {
+  margin-right: 3px;
+}

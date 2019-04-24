@@ -1,0 +1,37 @@
+body {
+  padding-top: 1px;
+  padding-bottom: 1px;
+  background-color: #eee;
+}
+
+.fgrm-signin {
+  max-width: 330px;
+  padding: 1px;
+  margin: 0 auto;
+}
+
+.form-signin-heading,
+.form-group{
+  left: 1px;
+  max-width: 330px;
+}
+
+.row{
+  margin: 1px;
+  left: 1ipx;
+  max-width: 330px;
+}
+
+#ex1Slider .slider-selection {
+  background: #BABABA;
+}
+
+.input-short{
+    width:50px;
+    height: 28px;
+}
+
+.input-long{
+    width:180px;
+    height: 28px;
+}

@@ -1,0 +1,31 @@
+body,button, input, select, textarea,h1 ,h2, h3, h4, h5, h6 { font-family: Microsoft YaHei,'微软雅黑' , Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif;}
+
+body {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #eee;
+}
+
+.fgrm-signin {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+
+.form-signin-heading,
+.form-group{
+  left: 15px;
+  max-width: 330px;
+  border-bottom:1px solid #a6a6a6;
+}
+
+.row{
+  margin: 15px;
+  left: 15px;
+  max-width: 330px;
+}
+
+#ex1Slider .slider-selection {
+  background: #BABABA;
+}
+

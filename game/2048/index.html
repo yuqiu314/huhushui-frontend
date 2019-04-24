@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>还装App？点进来，直接玩2048！还能分享战绩哟~</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="css/normalize.css"><style>
+      /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
+      html {
+  font-family: RobotoDraft, 'Helvetica Neue', Helvetica, Arial;
+}
+
+body {
+  background: rgba(52, 73, 94,1.0);
+  position:relative;
+}
+
+.cover{
+position:absolute;
+top:0px;
+bottom:0px;
+width:100%;
+height:100%;
+z-index:1200;
+background-color:rgba(44, 62, 80,1.0);
+border-radius:10px;
+//display: none;
+}
+.remindtext {
+color: rgba(231, 76, 60,1.0);
+font-weight: bold;
+font-size: 20px;
+  margin:10px auto;
+}
+.scoretext {
+color: #efefef;
+font-weight: bold;
+font-size: 30px;
+text-align: center;
+  margin:20px auto;
+}
+#curvedarrow {
+  position: relative;
+  width: 0;
+  height: 0;
+  border-top: 27px solid transparent;
+  border-right: 27px solid rgba(231, 76, 60,1.0);
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  top: 0px;
+  left: 90%;
+}
+#curvedarrow:after {
+  content: "";
+  position: absolute;
+  border: 0 solid transparent;
+  border-top: 9px solid rgba(231, 76, 60,1.0);
+  border-radius: 0 60px 0 0;
+  top: -54px;
+  left: -12px;
+  width: 36px;
+  height: 36px;
+  -webkit-transform: rotate(220deg);
+  -moz-transform: rotate(220deg);
+  -ms-transform: rotate(220deg);
+  -o-transform: rotate(220deg);
+}
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+h1 {
+  color: #efefef;
+  text-align: center;
+  font-weight: normal;
+  font-weight: 300;
+  margin: 30px auto;
+}
+
+button {
+  padding: 12px 30px;
+  box-shadow: none;
+  border: none;
+  color: rgba(189, 195, 199,1.0);
+  cursor: pointer;
+  background-color: rgba(192, 57, 43,0.8);
+  border-radius: 5px;
+}
+button:hover {
+  background-color: rgba(192, 57, 43,0.8);
+  color: yellowgreen;
+}
+button:focus {
+  outline: none;
+}
+
+.list{
+  background-color: rgba(0, 0, 0, 0.2);
+  position: relative;
+  display: block;
+  height:450px;
+  border-radius:10px;
+  margin:0 auto;
+} 
+@media screen and (min-width: 501px) { 
+.list {width: 500px; height: 500px;}
+.tile {font-size: 50px;line-height: 100px;}
+} 
+@media screen and (max-width: 500px) { 
+.list {width: 400px; height: 400px;}
+.tile {font-size: 40px;line-height: 80px;}
+}
+@media screen and (max-width: 400px) { 
+.list {width: 300px; height: 300px;}
+.tile {font-size: 30px;line-height: 60px;}
+}
+.wipe{
+position:absolute;
+top:0px;
+bottom:0px;
+width:100%;
+height:100%;
+z-index:1100;
+background-color:rgba(128,0,0,0.0)
+}
+
+.tile {
+  display: block;
+  position: absolute;
+  color: #3A3A4D;
+  font-weight: bold;
+    text-align: center;
+    width:21%;
+    height:21%;
+  word-wrap: break-word;  
+    word-break: normal; 
+}
+
+.layout {
+  color: #efefef;
+  margin-bottom: 15px;
+}
+.layout label {
+  margin-right: 15px;
+  cursor: pointer;
+}
+.layout label:hover {
+  color: yellowgreen;
+}
+.layout input {
+  margin-right: 3px;
+}
+    </style>
+        <script src="js/prefixfree.min.js"></script>
+  </head>
+  <body>
+<img src="img/2048.jpg" style="width:0;height:0;position:absolute;">
+    <h1>准备开始！</h1>
+
+<div class="list" id="list">
+<div class="wipe" id="wipe"></div>
+</div>
+<div class="cover">
+<div id="curvedarrow"></div>
+<div class="remindtext">点击右上角，分享光辉战绩吧！</div>
+<div class = "scoretext" id="maxnum">最大到：0</div>
+<div class = "scoretext" id="score">得分：0</div>
+<div class = "scoretext"><button id="restart">再来一次！</button></div>
+</div>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src='js/TweenMax.min.js'></script>
+<script src='js/Draggable.min.js'></script>
+<script src="js/index.js"></script>
+</body>
+</html>
